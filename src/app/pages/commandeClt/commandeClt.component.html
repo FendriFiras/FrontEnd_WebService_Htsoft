@@ -1,0 +1,31 @@
+<h2 class="content-block">CommandeClt List </h2>
+
+
+<dx-data-grid class="dx-card wide-card" keyExpr="num_cde_clt" [dataSource]="dataSource" [showBorders]="false"
+    [focusedRowEnabled]="true" [focusedRowIndex]="0" [columnAutoWidth]="true" [columnHidingEnabled]="true">
+
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+
+    <dxi-column dataField="num_cde_clt" [hidingPriority]="2">
+    </dxi-column>
+    <dxi-column dataField="cod_clt" caption="cod_clt" [hidingPriority]="8">
+    </dxi-column>
+    <dxi-column dataField="rais_soc_clt" caption="rais_soc_clt" [hidingPriority]="6">
+    </dxi-column>
+    <dxi-column dataField="etat_cde" caption="etat_cde" [hidingPriority]="5">
+
+    </dxi-column>
+    <dxi-column dataField="dat_cde" caption="dat_cde" [allowSorting]="false" [hidingPriority]="7">
+    </dxi-column>
+    <dxi-column dataField="totalttc" caption="totalttc" [hidingPriority]="3">
+    </dxi-column>
+    <dxi-column dataField="transporteur" caption="transporteur" [hidingPriority]="4">
+    </dxi-column>
+    <dxi-column dataField="societe" caption="societe" name="Priority" [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column dataField="dat_liv" caption="dat_liv" [hidingPriority]="0">
+    </dxi-column>
+
+</dx-data-grid>
