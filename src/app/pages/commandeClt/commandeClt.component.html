@@ -1,6 +1,23 @@
 <h2 class="content-block">CommandeClt List </h2>
-
-
+<app-button-popup></app-button-popup>
+<app-client></app-client>
+<!-- <div class="btn-group" role="group" aria-label="Basic example">
+    <div class="p-3">
+        <button type="button" class="btn btn-primary" (click)="OnclickAjouter()">Ajouter</button> 
+    </div>
+    <div class="p-3">
+        <button type="button" class="btn btn-primary">Supprimer</button> 
+    </div>
+    <div class="p-3">
+        <button type="button" class="btn btn-primary">Modifier</button> 
+    </div>
+    <div class="p-3">
+        <button type="button" class="btn btn-primary">Imprimer</button> 
+    </div>
+    <div class="p-3">
+        <button type="button" class="btn btn-primary">Colonnes</button> 
+    </div>
+</div> -->
 <dx-data-grid class="dx-card wide-card" keyExpr="num_cde_clt" [dataSource]="dataSource" [showBorders]="false"
     [focusedRowEnabled]="true" [focusedRowIndex]="0" [columnAutoWidth]="true" [columnHidingEnabled]="true">
 

@@ -13,13 +13,17 @@ import {
   CreateAccountFormModule,
   ChangePasswordFormModule,
   LoginFormModule,
+  ClientModule,
+  ButtonPopupModule,
 } from './shared/components';
 import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { UnauthenticatedContentModule } from './unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent ,],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -33,6 +37,10 @@ import { AppRoutingModule } from './app-routing.module';
     LoginFormModule,
     UnauthenticatedContentModule,
     AppRoutingModule,
+    NgbModule,
+    ClientModule,
+    ButtonPopupModule,
+ 
   ],
   providers: [AuthService, ScreenService, AppInfoService],
   bootstrap: [AppComponent],

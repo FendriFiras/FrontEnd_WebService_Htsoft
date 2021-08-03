@@ -1,0 +1,23 @@
+<h2 class="content-block">Liste des Clients </h2>
+
+
+<dx-data-grid class="dx-card wide-card" keyExpr="cod_clt" [dataSource]="dataSource1" [showBorders]="false"
+  [focusedRowEnabled]="true" [focusedRowIndex]="0" [columnAutoWidth]="true" [columnHidingEnabled]="true"
+  [columnAutoWidth]="true" [showBorders]="true">
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+
+  <dxi-column dataField="cod_clt" [hidingPriority]="0">
+  </dxi-column>
+  <dxi-column dataField="raison" caption="raison" [hidingPriority]="4">
+  </dxi-column>
+  <dxi-column dataField="remise" caption="remise" [hidingPriority]="2">
+  </dxi-column>
+  <dxi-column dataField="Solde_Final" caption="Solde_Final" [hidingPriority]="1">
+
+  </dxi-column>
+  <dxi-column dataField="total" caption="total" [allowSorting]="false" [hidingPriority]="3">
+  </dxi-column>
+
+</dx-data-grid>

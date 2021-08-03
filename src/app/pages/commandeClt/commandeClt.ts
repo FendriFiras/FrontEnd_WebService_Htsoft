@@ -4,6 +4,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @Component({
   templateUrl: 'commandeClt.component.html',
+
 })
 export class CommandeCltComponent {
   dataSource: any;
@@ -15,7 +16,6 @@ export class CommandeCltComponent {
       .subscribe((data) => {
         this.dataSource = data as string[];
       });
-
     this.priority = [
       { name: 'High', value: 4 },
       { name: 'Urgent', value: 3 },
@@ -23,4 +23,5 @@ export class CommandeCltComponent {
       { name: 'Low', value: 1 },
     ];
   }
+ 
 }

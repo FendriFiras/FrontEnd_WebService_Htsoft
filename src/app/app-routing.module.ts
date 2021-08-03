@@ -1,10 +1,12 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {
   LoginFormComponent,
   ResetPasswordFormComponent,
   CreateAccountFormComponent,
   ChangePasswordFormComponent,
+  ButtonPopupModule,
+  ClientModule,
 } from './shared/components';
 import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
@@ -65,6 +67,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { useHash: true }),
     DxDataGridModule,
     DxFormModule,
+    ButtonPopupModule,
+    ClientModule
+    
   ],
   providers: [AuthGuardService],
   exports: [RouterModule],
@@ -74,5 +79,6 @@ const routes: Routes = [
     stockDepotComponent,
     CommandeCltComponent,
   ],
+  
 })
 export class AppRoutingModule {}
