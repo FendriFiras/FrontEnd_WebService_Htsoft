@@ -5,8 +5,6 @@
   [focusedRowEnabled]="true" [focusedRowIndex]="0" [columnAutoWidth]="true" [columnHidingEnabled]="true"
   [columnAutoWidth]="true" [showBorders]="true">
 
-  <dxo-paging [pageSize]="10"></dxo-paging>
-  <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
   <dxo-filter-row [visible]="true"></dxo-filter-row>
 
   <dxi-column dataField="cod_art" [hidingPriority]="2">
@@ -22,11 +20,13 @@
   </dxi-column>
   <dxi-column dataField="pvttc" caption="pvttc" [hidingPriority]="3">
   </dxi-column>
-  <dxi-column dataField="prixtot" caption="prixtot" [hidingPriority]="4">
+  <dxi-column dataField="cod_famp" caption="cod_famp" [hidingPriority]="4">
   </dxi-column>
   <dxi-column dataField="cod_cat" caption="cod_cat" name="Priority" [hidingPriority]="1">
   </dxi-column>
-  <dxi-column dataField="reference" caption="reference" [hidingPriority]="0">
+  <dxi-column dataField="reference" caption="reference  " [hidingPriority]="0">
   </dxi-column>
-
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxo-pager></dxo-pager>
+  <!-- <dxo-pager [showInfo]="true"></dxo-pager> -->
 </dx-data-grid>

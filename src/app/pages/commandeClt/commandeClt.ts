@@ -4,18 +4,32 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @Component({
   templateUrl: 'commandeClt.component.html',
-
 })
 export class CommandeCltComponent {
   dataSource: any;
   priority: any[];
 
-  constructor(private httpService: HttpClient) {
-    this.httpService
-      .get('https://localhost:44393/api/CommandeClient/GetCommandes')
-      .subscribe((data) => {
-        this.dataSource = data as string[];
-      });
+  constructor() {
+    this.dataSource = {
+      store: {
+        type: 'odata',
+        url: 'https://localhost:44393/odata/CommandeClientOdata',
+        key: 'num_cde_clt',
+        version: 4,
+      },
+      select: [
+        'num_cde_clt',
+        'cod_clt',
+        'rais_soc_clt',
+        'etat_cde',
+        'dat_cde',
+        'totalttc',
+        'transporteur',
+        'societe',
+        'dat_liv',
+      ],
+      //filter: ['Product_Current_Inventory', '>', 0]
+    };
     this.priority = [
       { name: 'High', value: 4 },
       { name: 'Urgent', value: 3 },
@@ -23,5 +37,4 @@ export class CommandeCltComponent {
       { name: 'Low', value: 1 },
     ];
   }
- 
 }

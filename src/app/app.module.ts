@@ -9,9 +9,6 @@ import {
 } from './layouts';
 import {
   FooterModule,
-  ResetPasswordFormModule,
-  CreateAccountFormModule,
-  ChangePasswordFormModule,
   LoginFormModule,
   ClientModule,
   ButtonPopupModule,
@@ -31,9 +28,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SideNavInnerToolbarModule,
     SingleCardModule,
     FooterModule,
-    ResetPasswordFormModule,
-    CreateAccountFormModule,
-    ChangePasswordFormModule,
     LoginFormModule,
     UnauthenticatedContentModule,
     AppRoutingModule,
